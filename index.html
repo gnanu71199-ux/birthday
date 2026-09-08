@@ -922,8 +922,16 @@ let currentPhoto = 0;
    START APP
 ========================= */
 
-function startBirthday() {
+function startBirthday() { 
 
+    // Start birthday music 🎵
+    let music = document.getElementById("birthdayMusic");
+
+    music.play().catch(function(error) {
+        console.log("Music could not play automatically");
+    });
+
+    // Go to balloon screen 🎈
     changeScreen(
         "welcomeScreen",
         "balloonScreen"
